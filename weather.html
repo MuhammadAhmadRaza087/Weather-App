@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="input_city" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit" id="search_btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Main container -->
+    <div class="container my-4">
+        <div class="row" id="image_box">
+            <div class="col-lg-4 text-center">
+                <img class="round_image" src="images/isl_img.jpg" alt="">
+                <h2 class="city-name"></h2>
+                <p>Temperature of <span class="city-name"></span> is <span id="city_temp"></span>.</p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+        <!-- Table -->
+        <table class="table table-striped table-hover my-4">
+            <thead>
+                <th>City</th>
+                <th>Cloud_pct</th>
+                <th>Temperature (C)</th>
+                <th>Feels Like</th>
+                <th>Humidity</th>
+                <th>Min_temp</th>
+                <th>Max_temp</th>
+                <th>Wind_speed</th>
+                <th>Wind_degrees</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="city_name"></td>
+                    <td id="cloud_pct"></td>
+                    <td id="temp"></td>
+                    <td id="feels_like"></td>
+                    <td id="humidity"></td>
+                    <td id="min_temp"></td>
+                    <td id="max_temp"></td>
+                    <td id="wind_speed"></td>
+                    <td id="wind_degrees"></td>
+                    <td id="sunrise"></td>
+                    <td id="sunset"></td>
+                </tr>               
+            </tbody>
+        </table>
+        <!-- footer -->
+    <footer class="foot2">
+        <h5>This weather app has been ceated and &copy; by Ahmad Raza</h5>
+    </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="weather.js"></script>
+</body>
+
+</html>

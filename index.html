@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <!-- Heading Slider -->
+    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="images/image1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Weather App</h5>
+                    <p>Let's predict the weather and stay safe at your homes.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/image2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Weather App</h5>
+                    <p>Let's predict the weather and stay safe at your homes.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/image3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Weather App</h5>
+                    <p>Let's predict the weather and stay safe at your homes.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="input_city" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit" id="search_btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Main container -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+               <img class="round_image" src="images/isl_img.jpg" alt="">
+                <h2>Islamabad</h2>
+                <p>Temperature of Islamabad is <span id="is_temp"></span>.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 text-center">
+                <img class="round_image" src="images/col_img.jpg" alt="">
+                <h2>Columbia</h2>
+                <p>Temperature of Columbia is <span id="col_temp"></span>.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 text-center">
+                <img class="round_image" src="images/dub_img.jpg" alt="">
+                <h2>Dubai</h2>
+                <p>Temperature of Dubai is <span id="du_temp"></span>.</p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+        <!-- Table -->
+        <table class="table table-striped table-hover my-4">
+            <thead>
+                <th>City</th>
+                <th>Cloud_pct</th>
+                <th>Temperature (C)</th>
+                <th>Feels Like</th>
+                <th>Humidity</th>
+                <th>Min_temp</th>
+                <th>Max_temp</th>
+                <th>Wind_speed</th>
+                <th>Wind_degrees</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Islamabad</th>
+                    <td id="isl_cloud_pct"></td>
+                    <td id="isl_temp"></td>
+                    <td id="isl_feels_like"></td>
+                    <td id="isl_humidity"></td>
+                    <td id="isl_min_temp"></td>
+                    <td id="isl_max_temp"></td>
+                    <td id="isl_wind_speed"></td>
+                    <td id="isl_wind_degrees"></td>
+                    <td id="isl_sunrise"></td>
+                    <td id="isl_sunset"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Columbia</th>
+                    <td id="colm_cloud_pct"></td>
+                    <td id="colm_temp"></td>
+                    <td id="colm_feels_like"></td>
+                    <td id="colm_humidity"></td>
+                    <td id="colm_min_temp"></td>
+                    <td id="colm_max_temp"></td>
+                    <td id="colm_wind_speed"></td>
+                    <td id="colm_wind_degrees"></td>
+                    <td id="colm_sunrise"></td>
+                    <td id="colm_sunset"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Dubai</th>
+                    <td id="dub_cloud_pct"></td>
+                    <td id="dub_temp"></td>
+                    <td id="dub_feels_like"></td>
+                    <td id="dub_humidity"></td>
+                    <td id="dub_min_temp"></td>
+                    <td id="dub_max_temp"></td>
+                    <td id="dub_wind_speed"></td>
+                    <td id="dub_wind_degrees"></td>
+                    <td id="dub_sunrise"></td>
+                    <td id="dub_sunset"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- footer -->
+   <footer class="foot">
+    <h5>This weather app has been ceated and &copy; by Ahmad Raza</h5>
+   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

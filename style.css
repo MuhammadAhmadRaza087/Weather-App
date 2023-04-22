@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.round_image{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20vh;
+}
+#image_box{
+    text-align: center;
+    margin-left: 40%;
+}
+.foot{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5rem;
+}
+.foot2 {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 9.5rem;
+}
